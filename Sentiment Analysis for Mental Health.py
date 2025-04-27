@@ -20,7 +20,7 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 
 #Loading the dataset
-path = r"D:\datasets\New To Work on 3\Sentiment Analysis for Mental Health\Sentiment Analysis for Mental Health.csv"
+path = r"...Path...\Sentiment Analysis for Mental Health.csv"
 df = pd.read_csv(path)
 
 #EDA Part
@@ -53,7 +53,7 @@ nltk.data.path.append('F:/Users/ELECOMP/nltk_data')
 nltk.download('stopwords', download_dir='F:/Users/ELECOMP/nltk_data')
 nltk.data.path.append('F:/Users/ELECOMP/nltk_data')
 
-
+#Preprocess the Text Data
 def preprocess_text(text):
     # Convert to lowercase
     text = text.lower()
@@ -79,7 +79,7 @@ dataset['Encoded_Status'].sample(10)
 # Display the mapping of labels to numbers
 label_mapping = dict(zip(encoder.classes_, encoder.transform(encoder.classes_)))
 print("Label Mapping:", label_mapping)
-
+# Features (Processed_Statement) and target (Encoded_Status)
 X = dataset['Preprocessed_Statement']
 y = dataset['Encoded_Status']
 
